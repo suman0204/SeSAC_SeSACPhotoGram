@@ -19,9 +19,26 @@ class AddViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(selectImageNotificationObserver), name: NSNotification.Name("SelectImage"), object: nil)
+    }
+    
+    @objc func selectImageNotificationObserver(notification: NSNotification) {
+        print("selectImageNotificationObserver")
+        print(notification.userInfo?["name"])
+        print(notification.userInfo?["sample"])
+        
+        if let name = notification.userInfo?["name"] as? String {
+            mainView.photoImageView.image = UIImage(systemName: name)
+        }
+        
     }
     
     @objc func searchButtonClicked() {
+        
+        let word = ["Apple", "Banna", "Cookie", "Cake", "Sky"]
+        
+        NotificationCenter.default.post(name: NSNotification.Name("RecommandKeyword"), object: nil, userInfo: ["word": word.randomElement()! ])
+        
         present(SearchViewController(), animated: true)
     }
     
