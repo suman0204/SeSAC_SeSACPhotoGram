@@ -24,7 +24,40 @@
 		8BF8538F2A9D7C7800F57338 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF8538E2A9D7C7800F57338 /* DateView.swift */; };
 		8BF853912A9D7DCA00F57338 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853902A9D7DCA00F57338 /* DateViewController.swift */; };
 		8BF853932A9D8E9000F57338 /* DateFormat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853922A9D8E9000F57338 /* DateFormat+Extension.swift */; };
+		8BF853CF2A9D9E2800F57338 /* SeSACPhotoFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF853CC2A9D9E2800F57338 /* SeSACPhotoFramework.framework */; };
+		8BF853D02A9D9E2800F57338 /* SeSACPhotoFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF853CC2A9D9E2800F57338 /* SeSACPhotoFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BF853CB2A9D9E2800F57338 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BF853C52A9D9BF700F57338 /* SeSACPhotoFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8BF8539E2A9D92C900F57338;
+			remoteInfo = SeSACPhotoFramework;
+		};
+		8BF853CD2A9D9E2800F57338 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BF853C52A9D9BF700F57338 /* SeSACPhotoFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8BF853A82A9D92C900F57338;
+			remoteInfo = SeSACPhotoFrameworkTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BF853D12A9D9E2800F57338 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8BF853D02A9D9E2800F57338 /* SeSACPhotoFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8BF853592A9C1D9400F57338 /* SeSACPhotoGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACPhotoGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +78,7 @@
 		8BF8538E2A9D7C7800F57338 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		8BF853902A9D7DCA00F57338 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		8BF853922A9D8E9000F57338 /* DateFormat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormat+Extension.swift"; sourceTree = "<group>"; };
+		8BF853C52A9D9BF700F57338 /* SeSACPhotoFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACPhotoFramework.xcodeproj; path = "../../SeSacDay31(08.29)/SeSACPhotoFramework/SeSACPhotoFramework.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF853CF2A9D9E2800F57338 /* SeSACPhotoFramework.framework in Frameworks */,
 				8BF853722A9C1E2000F57338 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,8 +97,10 @@
 		8BF853502A9C1D9400F57338 = {
 			isa = PBXGroup;
 			children = (
+				8BF853C52A9D9BF700F57338 /* SeSACPhotoFramework.xcodeproj */,
 				8BF8535B2A9C1D9400F57338 /* SeSACPhotoGram */,
 				8BF8535A2A9C1D9400F57338 /* Products */,
+				8BF853C82A9D9E2800F57338 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +168,22 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		8BF853C62A9D9BF700F57338 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BF853CC2A9D9E2800F57338 /* SeSACPhotoFramework.framework */,
+				8BF853CE2A9D9E2800F57338 /* SeSACPhotoFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BF853C82A9D9E2800F57338 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +194,7 @@
 				8BF853552A9C1D9400F57338 /* Sources */,
 				8BF853562A9C1D9400F57338 /* Frameworks */,
 				8BF853572A9C1D9400F57338 /* Resources */,
+				8BF853D12A9D9E2800F57338 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,12 +237,35 @@
 			);
 			productRefGroup = 8BF8535A2A9C1D9400F57338 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8BF853C62A9D9BF700F57338 /* Products */;
+					ProjectRef = 8BF853C52A9D9BF700F57338 /* SeSACPhotoFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8BF853582A9C1D9400F57338 /* SeSACPhotoGram */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8BF853CC2A9D9E2800F57338 /* SeSACPhotoFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SeSACPhotoFramework.framework;
+			remoteRef = 8BF853CB2A9D9E2800F57338 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8BF853CE2A9D9E2800F57338 /* SeSACPhotoFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SeSACPhotoFrameworkTests.xctest;
+			remoteRef = 8BF853CD2A9D9E2800F57338 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8BF853572A9C1D9400F57338 /* Resources */ = {
