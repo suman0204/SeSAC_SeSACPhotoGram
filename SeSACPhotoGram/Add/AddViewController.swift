@@ -40,7 +40,7 @@ class AddViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(selectImageNotificationObserver), name: .selectImage, object: nil)
         
         //framework에 public으로 선언된 메서드
-        sesacShowActivityViewController(image: UIImage(systemName: "star")!, url: "hello", text: "hi")
+//        sesacShowActivityViewController(image: UIImage(systemName: "star")!, url: "hello", text: "hi")
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -77,7 +77,33 @@ class AddViewController: BaseViewController {
         mainView.searchProtocolButton.addTarget(self, action: #selector(searchProtocolButtonClicked), for: .touchUpInside)
 
         mainView.dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+        
+        mainView.titleButton.addTarget(self, action: #selector(titleButtonClicked), for: .touchUpInside)
+        
+        mainView.contentButton.addTarget(self, action: #selector(contencButtonClicked), for: .touchUpInside)
 
+    }
+    
+    @objc func contencButtonClicked() {
+        let vc = ContentViewController()
+        
+        vc.completionHandler = { content in
+            self.mainView.contentButton.setTitle(content, for: .normal)
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func titleButtonClicked() {
+        let vc = TitleViewController()
+        
+        //Closure - 3
+        vc.completionHandler = { title, age, push in
+            self.mainView.titleButton.setTitle(title, for: .normal)
+            print("completionHandler", age, push)
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func searchProtocolButtonClicked() {

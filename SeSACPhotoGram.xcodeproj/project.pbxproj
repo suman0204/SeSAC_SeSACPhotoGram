@@ -26,6 +26,10 @@
 		8BF853932A9D8E9000F57338 /* DateFormat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853922A9D8E9000F57338 /* DateFormat+Extension.swift */; };
 		8BF853CF2A9D9E2800F57338 /* SeSACPhotoFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF853CC2A9D9E2800F57338 /* SeSACPhotoFramework.framework */; };
 		8BF853D02A9D9E2800F57338 /* SeSACPhotoFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF853CC2A9D9E2800F57338 /* SeSACPhotoFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8BF853D32A9DB54D00F57338 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853D22A9DB54C00F57338 /* TitleViewController.swift */; };
+		8BF853D52A9DBAF800F57338 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853D42A9DBAF800F57338 /* TitleView.swift */; };
+		8BF853D72A9DC0CF00F57338 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853D62A9DC0CF00F57338 /* ContentViewController.swift */; };
+		8BF853D92A9DC75300F57338 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853D82A9DC75300F57338 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		8BF853902A9D7DCA00F57338 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		8BF853922A9D8E9000F57338 /* DateFormat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormat+Extension.swift"; sourceTree = "<group>"; };
 		8BF853C52A9D9BF700F57338 /* SeSACPhotoFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACPhotoFramework.xcodeproj; path = "../../SeSacDay31(08.29)/SeSACPhotoFramework/SeSACPhotoFramework.xcodeproj"; sourceTree = "<group>"; };
+		8BF853D22A9DB54C00F57338 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		8BF853D42A9DBAF800F57338 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		8BF853D62A9DC0CF00F57338 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		8BF853D82A9DC75300F57338 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 				8BF853652A9C1D9500F57338 /* Assets.xcassets */,
 				8BF853672A9C1D9500F57338 /* LaunchScreen.storyboard */,
 				8BF8536A2A9C1D9500F57338 /* Info.plist */,
+				8BF853D82A9DC75300F57338 /* WebViewController.swift */,
 			);
 			path = SeSACPhotoGram;
 			sourceTree = "<group>";
@@ -155,6 +164,9 @@
 				8BF8537C2A9C2FF200F57338 /* AddView.swift */,
 				8BF8538E2A9D7C7800F57338 /* DateView.swift */,
 				8BF853902A9D7DCA00F57338 /* DateViewController.swift */,
+				8BF853D42A9DBAF800F57338 /* TitleView.swift */,
+				8BF853D22A9DB54C00F57338 /* TitleViewController.swift */,
+				8BF853D62A9DC0CF00F57338 /* ContentViewController.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -285,12 +297,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BF8538D2A9D7BF300F57338 /* Notification+Extension.swift in Sources */,
+				8BF853D92A9DC75300F57338 /* WebViewController.swift in Sources */,
 				8BF8537D2A9C2FF200F57338 /* AddView.swift in Sources */,
+				8BF853D72A9DC0CF00F57338 /* ContentViewController.swift in Sources */,
 				8BF853782A9C274F00F57338 /* SearchViewController.swift in Sources */,
 				8BF853812A9C365E00F57338 /* BaseCollectionViewCell.swift in Sources */,
 				8BF853932A9D8E9000F57338 /* DateFormat+Extension.swift in Sources */,
 				8BF8537A2A9C2EB500F57338 /* BaseView.swift in Sources */,
 				8BF853912A9D7DCA00F57338 /* DateViewController.swift in Sources */,
+				8BF853D52A9DBAF800F57338 /* TitleView.swift in Sources */,
 				8BF853612A9C1D9400F57338 /* AddViewController.swift in Sources */,
 				8BF8538F2A9D7C7800F57338 /* DateView.swift in Sources */,
 				8BF8537F2A9C337500F57338 /* SearchView.swift in Sources */,
@@ -298,6 +313,7 @@
 				8BF8535D2A9C1D9400F57338 /* AppDelegate.swift in Sources */,
 				8BF8535F2A9C1D9400F57338 /* SceneDelegate.swift in Sources */,
 				8BF853832A9C37EF00F57338 /* SearchCollectionCell.swift in Sources */,
+				8BF853D32A9DB54D00F57338 /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
