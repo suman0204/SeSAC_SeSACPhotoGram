@@ -7,6 +7,15 @@
 
 import UIKit
 
+//Protocol 값 전달 1.
+protocol PassDataDelegate {
+    func receiveData(date: Date)
+}
+
+protocol PassImageDelegate {
+    func receiveImage(image: UIImage)
+}
+
 class AddViewController: BaseViewController {
 
     let mainView = AddView()
@@ -19,13 +28,25 @@ class AddViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(selectImageNotificationObserver), name: NSNotification.Name("SelectImage"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#function)
+        NotificationCenter.default.addObserver(self, selector: #selector(selectImageNotificationObserver), name: .selectImage, object: nil)
+        
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("SelectImage"), object: nil)
     }
     
     @objc func selectImageNotificationObserver(notification: NSNotification) {
-        print("selectImageNotificationObserver")
-        print(notification.userInfo?["name"])
-        print(notification.userInfo?["sample"])
+        print(#function)
+//        print("selectImageNotificationObserver")
+//        print(notification.userInfo?["name"])
+//        print(notification.userInfo?["sample"])
         
         if let name = notification.userInfo?["name"] as? String {
             mainView.photoImageView.image = UIImage(systemName: name)
@@ -39,14 +60,31 @@ class AddViewController: BaseViewController {
         
         NotificationCenter.default.post(name: NSNotification.Name("RecommandKeyword"), object: nil, userInfo: ["word": word.randomElement()! ])
         
-        present(SearchViewController(), animated: true)
+        navigationController?.pushViewController(SearchViewController(), animated: true)
     }
     
     override func configureView() { //addSubView
         super.configureView()
         print("Add ConfigureView")
         mainView.searchButton.addTarget(self, action: #selector(searchButtonClicked), for: .touchUpInside)
+        
+        mainView.searchProtocolButton.addTarget(self, action: #selector(searchProtocolButtonClicked), for: .touchUpInside)
 
+        mainView.dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+
+    }
+    
+    @objc func searchProtocolButtonClicked() {
+        let vc = SearchViewController()
+        vc.delegate = self
+        present(vc, animated: true)
+    }
+    
+    @objc func dateButtonClicked() {
+        //Protocol 값 전달 5.
+        let vc = DateViewController()
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     override func setConstraints() { //제약조건
@@ -57,3 +95,16 @@ class AddViewController: BaseViewController {
 
 }
 
+//Protocol 값 전달 4.
+extension AddViewController: PassDataDelegate {
+    func receiveData(date: Date) {
+        mainView.dateButton.setTitle(DateFormatter.converDate(date: date), for: .normal)
+    }
+    
+}
+
+extension AddViewController: PassImageDelegate {
+    func receiveImage(image: UIImage) {
+        mainView.photoImageView.image = image
+    }
+}
