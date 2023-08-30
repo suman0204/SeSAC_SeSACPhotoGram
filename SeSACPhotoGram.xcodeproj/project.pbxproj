@@ -30,6 +30,8 @@
 		8BF853D52A9DBAF800F57338 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853D42A9DBAF800F57338 /* TitleView.swift */; };
 		8BF853D72A9DC0CF00F57338 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853D62A9DC0CF00F57338 /* ContentViewController.swift */; };
 		8BF853D92A9DC75300F57338 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853D82A9DC75300F57338 /* WebViewController.swift */; };
+		8BF853EE2A9EC73F00F57338 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853ED2A9EC73F00F57338 /* APIService.swift */; };
+		8BF853F02A9EEBD300F57338 /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF853EF2A9EEBD300F57338 /* URLSessionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		8BF853D42A9DBAF800F57338 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		8BF853D62A9DC0CF00F57338 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		8BF853D82A9DC75300F57338 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		8BF853ED2A9EC73F00F57338 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		8BF853EF2A9EEBD300F57338 /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		8BF8535B2A9C1D9400F57338 /* SeSACPhotoGram */ = {
 			isa = PBXGroup;
 			children = (
+				8BF853EC2A9EC72500F57338 /* Network */,
 				8BF8538B2A9D7BDA00F57338 /* Extension */,
 				8BF8537B2A9C2FC800F57338 /* Add */,
 				8BF853762A9C272600F57338 /* Search */,
@@ -194,6 +199,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BF853EC2A9EC72500F57338 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8BF853ED2A9EC73F00F57338 /* APIService.swift */,
+				8BF853EF2A9EEBD300F57338 /* URLSessionViewController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BF8538D2A9D7BF300F57338 /* Notification+Extension.swift in Sources */,
+				8BF853EE2A9EC73F00F57338 /* APIService.swift in Sources */,
 				8BF853D92A9DC75300F57338 /* WebViewController.swift in Sources */,
 				8BF8537D2A9C2FF200F57338 /* AddView.swift in Sources */,
 				8BF853D72A9DC0CF00F57338 /* ContentViewController.swift in Sources */,
@@ -310,6 +325,7 @@
 				8BF8538F2A9D7C7800F57338 /* DateView.swift in Sources */,
 				8BF8537F2A9C337500F57338 /* SearchView.swift in Sources */,
 				8BF853752A9C242400F57338 /* BaseViewController.swift in Sources */,
+				8BF853F02A9EEBD300F57338 /* URLSessionViewController.swift in Sources */,
 				8BF8535D2A9C1D9400F57338 /* AppDelegate.swift in Sources */,
 				8BF8535F2A9C1D9400F57338 /* SceneDelegate.swift in Sources */,
 				8BF853832A9C37EF00F57338 /* SearchCollectionCell.swift in Sources */,

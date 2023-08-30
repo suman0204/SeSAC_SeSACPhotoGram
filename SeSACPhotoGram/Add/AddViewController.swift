@@ -28,7 +28,8 @@ class AddViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        APIService.shared.callRequest()
+
         ClassOpenExample.publicExample()
         ClassPublicExample.publicExample()
 //        ClassPublicExample.internalExample()
@@ -81,6 +82,9 @@ class AddViewController: BaseViewController {
         mainView.titleButton.addTarget(self, action: #selector(titleButtonClicked), for: .touchUpInside)
         
         mainView.contentButton.addTarget(self, action: #selector(contencButtonClicked), for: .touchUpInside)
+        
+//        APIService.shared.callRequest()
+//        APIService()
 
     }
     

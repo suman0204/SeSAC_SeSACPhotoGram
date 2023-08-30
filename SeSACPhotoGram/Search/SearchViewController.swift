@@ -29,6 +29,8 @@ class SearchViewController: BaseViewController {
         //addObserver보다 post가 먼저 신호를 보내면 addObserver가 신호를 받지 못한다
         NotificationCenter.default.addObserver(self, selector: #selector(recommandKeywordNotificationObserver(notification:)), name: NSNotification.Name("RecommandKeyword"), object: nil)
 
+        mainView.searchBar.becomeFirstResponder()
+        mainView.searchBar.delegate = self
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -47,6 +49,12 @@ class SearchViewController: BaseViewController {
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
         
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        mainView.searchBar.resignFirstResponder()
     }
 }
 
