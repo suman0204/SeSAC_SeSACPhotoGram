@@ -15,6 +15,13 @@ class SearchViewController: BaseViewController {
     
     let imageList = ["pencil", "star", "person", "star.fill", "xmark", "person.circle"]
     
+    var searchImage: SearchImage?
+//    {
+//        didSet {
+//            self.col
+//        }
+//    }
+    
     //Protocol 값 전달 2.
     var delegate: PassImageDelegate?
     
@@ -31,6 +38,14 @@ class SearchViewController: BaseViewController {
 
         mainView.searchBar.becomeFirstResponder()
         mainView.searchBar.delegate = self
+        
+        UnsplashAPIManager.shared.callSearchRequest(query: "sky") { result in
+            print(result)
+            self.searchImage = result
+        } failure: {
+            print("ERROR")
+        }
+
     }
     
     override func viewDidDisappear(_ animated: Bool) {
