@@ -17,6 +17,10 @@ class ContentViewController: BaseViewController {
     
     //Closure - 1
     var completionHandler: ((String) -> () )?
+    
+    deinit {
+        print("Deinit",self)
+    }
 
     
     override func configureView() {

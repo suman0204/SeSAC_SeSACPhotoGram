@@ -24,6 +24,7 @@ class URLSessionViewController: UIViewController {
 }
 
 
+
 extension URLSessionViewController: URLSessionDataDelegate {
 
     //서버에서 최초로 응답 받은 경우에 호추(상태코드 처리)

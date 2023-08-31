@@ -36,6 +36,10 @@ class AddViewController: BaseViewController {
 //        ClassPublicExample.internalExample()
     }
     
+    deinit {
+        print("Deinit",self)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(#function)
@@ -163,9 +167,13 @@ extension AddViewController {
     }
     
     @objc func dateButtonClicked() {
-        //Protocol 값 전달 5.
-        let vc = DateViewController()
-        vc.delegate = self
+//        //Protocol 값 전달 5.
+//        let vc = DateViewController()
+//        vc.delegate = self
+//        navigationController?.pushViewController(vc, animated: true)
+        
+        //HomeViewController와 연결
+        let vc = HomeViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

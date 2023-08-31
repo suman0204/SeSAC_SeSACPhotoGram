@@ -37,6 +37,8 @@
 		8BF853FF2A9F835A00F57338 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8BF853FE2A9F835A00F57338 /* Alamofire */; };
 		8BF854012A9F837600F57338 /* UnsplashAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF854002A9F837600F57338 /* UnsplashAPIManager.swift */; };
 		8BF854032A9F86E300F57338 /* SearchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF854022A9F86E300F57338 /* SearchImage.swift */; };
+		8BF854062AA01A6C00F57338 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF854052AA01A6C00F57338 /* HomeViewController.swift */; };
+		8BF854082AA01A7400F57338 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF854072AA01A7400F57338 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		8BF853FB2A9F82DF00F57338 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		8BF854002A9F837600F57338 /* UnsplashAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManager.swift; sourceTree = "<group>"; };
 		8BF854022A9F86E300F57338 /* SearchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImage.swift; sourceTree = "<group>"; };
+		8BF854052AA01A6C00F57338 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8BF854072AA01A7400F57338 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 		8BF8535B2A9C1D9400F57338 /* SeSACPhotoGram */ = {
 			isa = PBXGroup;
 			children = (
+				8BF854042AA01A5700F57338 /* Home */,
 				8BF853EC2A9EC72500F57338 /* Network */,
 				8BF8538B2A9D7BDA00F57338 /* Extension */,
 				8BF8537B2A9C2FC800F57338 /* Add */,
@@ -222,6 +227,15 @@
 				8BF854022A9F86E300F57338 /* SearchImage.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8BF854042AA01A5700F57338 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8BF854052AA01A6C00F57338 /* HomeViewController.swift */,
+				8BF854072AA01A7400F57338 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +344,7 @@
 				8BF8538D2A9D7BF300F57338 /* Notification+Extension.swift in Sources */,
 				8BF853FC2A9F82DF00F57338 /* APIKey.swift in Sources */,
 				8BF853EE2A9EC73F00F57338 /* APIService.swift in Sources */,
+				8BF854082AA01A7400F57338 /* HomeView.swift in Sources */,
 				8BF853D92A9DC75300F57338 /* WebViewController.swift in Sources */,
 				8BF8537D2A9C2FF200F57338 /* AddView.swift in Sources */,
 				8BF853D72A9DC0CF00F57338 /* ContentViewController.swift in Sources */,
@@ -338,6 +353,7 @@
 				8BF853932A9D8E9000F57338 /* DateFormat+Extension.swift in Sources */,
 				8BF8537A2A9C2EB500F57338 /* BaseView.swift in Sources */,
 				8BF853912A9D7DCA00F57338 /* DateViewController.swift in Sources */,
+				8BF854062AA01A6C00F57338 /* HomeViewController.swift in Sources */,
 				8BF853D52A9DBAF800F57338 /* TitleView.swift in Sources */,
 				8BF854032A9F86E300F57338 /* SearchImage.swift in Sources */,
 				8BF853612A9C1D9400F57338 /* AddViewController.swift in Sources */,
