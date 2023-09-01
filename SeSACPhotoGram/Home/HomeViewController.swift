@@ -16,8 +16,8 @@ protocol  HomeViewProtocol: AnyObject {
 class HomeViewController: BaseViewController {
         
     override func loadView() { //super메서드 호출하면 애플이 기본으로 제공한느 view로 바뀌기 때문에 우리가 만든 뷰를 쓰기 위해선 super메서드 호출하지 않는다
-        let view = HomeView()
-        view.delegate = self
+        let view = HomeView() //RC +1  / RC 1
+        view.delegate = self // RC +1 / RC 2
         self.view = view
     }
     

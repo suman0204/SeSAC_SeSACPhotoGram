@@ -200,6 +200,24 @@ extension AddViewController {
                     
                 } else if item == .webSearch {
                     print("\(item.rawValue)선택")
+                    
+                    //Unsplash API Request
+                    UnsplashAPIManager.shared.callSearchRequest(query: "sky") { result in
+                        print(result)
+                        print(result.results[0].urls.thumb)
+                        let vc = SearchViewController()
+                        vc.searchedImage = result
+                        vc.sheetType = .webSearch
+                        vc.delegate = self
+
+                        self.present(vc, animated:  true)
+                        
+//                        self.searchImage = result
+                    } failure: {
+                        print("ERROR")
+                    }
+                    
+                    
                 }
             }))
         }

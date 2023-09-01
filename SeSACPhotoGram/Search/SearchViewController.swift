@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 
 
 class SearchViewController: BaseViewController {
@@ -15,7 +15,9 @@ class SearchViewController: BaseViewController {
     
     let imageList = ["pencil", "star", "person", "star.fill", "xmark", "person.circle"]
     
-    var searchImage: SearchImage?
+    var sheetType: SheetType?
+    
+    var searchedImage: SearchImage?
 //    {
 //        didSet {
 //            self.col
@@ -39,13 +41,9 @@ class SearchViewController: BaseViewController {
         mainView.searchBar.becomeFirstResponder()
         mainView.searchBar.delegate = self
         
-        UnsplashAPIManager.shared.callSearchRequest(query: "sky") { result in
-            print(result)
-            self.searchImage = result
-        } failure: {
-            print("ERROR")
-        }
 
+//        print("SearchViewController", searchedImage?.results[0].urls.thumb)
+    
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -84,7 +82,14 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return UICollectionViewCell()
         }
         
-        cell.imageView.image = UIImage(systemName: imageList[indexPath.item])
+        if sheetType == .webSearch {
+            guard let url = searchedImage?.results[indexPath.row].urls.thumb else {return UICollectionViewCell()}
+            print("searchedURL",url)
+            cell.imageView.kf.setImage(with: URL(string: url))
+
+        } else {
+            cell.imageView.image = UIImage(systemName: imageList[indexPath.item])
+        }
         
         return cell
     }
@@ -97,6 +102,11 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 //        NotificationCenter.default.post(name: NSNotification.Name("SelectImage"), object: nil, userInfo: [ "name" : imageList[indexPath.item], "sample" : "고래밥" ])
         
         //Protocol 값 전달
+        if sheetType == .webSearch {
+            guard let url = searchedImage?.results[indexPath.row].urls.thumb else {return}
+
+//            delegate?.receiveImage(image: UIImage(url))
+        }
         delegate?.receiveImage(image: UIImage(systemName: imageList[indexPath.item])!)
 
         
